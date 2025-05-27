@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Important Events · LV Lab @ NUS</title>
+  <title>News · LV-Lab</title>
   <link href="../../css/font-awesome.min.css" rel="stylesheet">
   <link href="../../css/magnific-popup.css" rel="stylesheet">
   <link href="../../css/owl.carousel.min.css" rel="stylesheet">
@@ -195,7 +195,7 @@
                         <li class="nav-item">
                             <a class="nav-link" href="../../index.html">LVLAB</a>
                         </li>
-                        <li class="nav-item">
+                        <li class="nav-item active">
                             <a class="nav-link" href="./index.html">Home</a>
                         </li>
                         <!-- <li class="nav-item ">
@@ -208,7 +208,7 @@
                         <li class="nav-item">
                             <a class="nav-link" href="./people.html">People</a>
                         </li>
-                        <li class="nav-item active">
+                        <li class="nav-item">
                             <a class="nav-link" href="./publications.html">Publications</a>
                         </li>
                         <!-- <li class="nav-item ">
@@ -251,6 +251,36 @@
 </header>
 <!-- Ends: header --><!--================================-->
 <!--End menu-->
+
+    <!-- Start: .pages-header -->
+    <div class="pages-header" style="
+        background-image: url(../../images/banner_9.webp);
+    ">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12">
+                    <h1>News</h1>
+                    <div class="d-flex flex-wrap align-items-center mb-3">
+                        <select id="yearFilter" class="custom-select w-auto mr-3">
+                          <option value="all">All years</option>
+                        </select>
+                      
+                        <input id="searchInput" type="search" placeholder="Search news…"
+                               class="form-control w-auto" style="max-width:220px">
+                      </div>
+                    <ul class="breadcrumbs">
+                        <li>
+                            <a href="./index.html">
+                                <span class="icon-home"></span> Home
+                            </a>
+                        </li>
+                        <li class="active">News</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Ends: .pages-header -->
 
 <div style="display:none">
   <select id="yearFilter">
@@ -397,7 +427,13 @@
       bindControls(years);
     })();
   </script>
-
+<script src="../../js/vendor/jquery/jquery-1.12.3.js"></script>
+<script src="../../js/vendor/jquery/popper.min.js"></script>
+<script src="../../js/vendor/bootstrap.min.js"></script>
+<script src="../../js/vendor/jquery.magnific-popup.min.js"></script>
+<script src="../../js/vendor/jquery.sticky.js"></script>
+<script src="../../js/vendor/owl.carousel.min.js"></script>
+<script src="../../js/main.js"></script>
   <!-- Starts: Footer -->
 <footer>
   <div class="container">

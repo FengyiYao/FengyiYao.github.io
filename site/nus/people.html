@@ -34,14 +34,17 @@
 
 <style>
     .row > .col {
-      margin-bottom: 1.5rem; /* 或 24px / 2rem 自行调 */
+      margin-bottom: 1rem; /* 或 24px / 2rem 自行调 */
     }
 
     .card-body {
-      padding: 1rem;
+      padding:0.75rem 1rem;
+      margin-bottom: 0rem;
+      padding-bottom: 0rem;
     }
 
     .card-img {
+      height:180px;
       border-radius: 8px;
       object-fit: cover;
     }
@@ -63,6 +66,7 @@
         padding-left: 1rem;
         font-size: 1.4rem;  /* 默认大约是 1rem，调大即可 */
         margin-right: 0.5rem;
+        padding-top: 0.2rem;
         color: #333;
         transition: transform 0.2s;
     }
@@ -75,7 +79,64 @@
     .custom-grid {
         display: grid;
         grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
-        gap: 1.5rem;
+        gap: 0rem;
+    }
+
+    /* 左侧头像区域 padding 调整 */
+    .custom-card .author-avater {
+        margin-right: 20px;
+    }
+
+    /* 整体卡片上下 padding 调整 */
+    .custom-card {
+        padding: 24px 28px;
+        flex-wrap: wrap;
+        align-items: center; 
+    }
+
+    .custom-card .right span {
+        font-size: 0.85rem;
+        color: #888;
+        display: block;
+        margin-bottom: 2px;
+    }
+
+    .custom-card .right h5 {
+        font-size: 1.15rem;
+        font-weight: 600;
+        color: #d80000; 
+        margin-bottom: 6px;
+    }
+
+    .custom-card .right p {
+        font-size: 0.9rem;
+        color: #666;
+        margin-bottom: 0;
+        line-height: 1.5;
+    }
+
+    .custom-card .intro-text {
+        font-size: 0.95rem;
+        color: #444;
+        line-height: 1.7;
+        padding-left: 16px;
+        border-left: 1px solid #eee;
+    }
+
+    .justify-text {
+        text-align: justify;
+        line-height: 1.8;
+        font-size: 0.95rem;
+        color: #444;
+        padding-left: 1rem;
+        border-left: 1px solid #eee;
+        hyphens: auto;
+        word-break: break-word;
+        text-indent: 2em;
+    }
+
+    .right-wrapper{
+        min-width:0;         
     }
 </style>
 </head>
@@ -192,44 +253,48 @@
 <!-- Start Latest Project -->
 <section class="latest-project section-padding" style="padding-bottom: 5px;">
     <div class="container">
-        <div class="col-md-12 text-left section-title">
-            <h2>Founding <span>Director</span> & LV-Lab<span> @ NUS</span>
-                <!-- <span>Head</span> -->
-            </h2>
-        </div>
-        <!-- Ends: .section-title -->
-        <div class="col-md-13">
-            <div class="row">                
-                <div class="col-md-6">
-                    <div class="latest-single d-flex">
-                        <div class="left" style="padding: 10px;">
-                            <div class="author-avater">
-                                <img src="../../images/yanshuicheng.png" alt="Dr. Shuicheng Yan" style="width: 160px; height: 200px;">
-                            </div>
-                        </div>
-                        <div class="right" style="padding-left: 15px;">
-                            <span>Director</span>
-                            <h3>
-                                <a href="https://scholar.google.com/citations?user=DNuiPHwAAAA">Dr. Shuicheng Yan</a>
-                            </h3>
-                            <p><span>Distinguished Professor (Practice), SoC, NUS</span></p>
-                        </div>
-                    </div>
+      <div class="col-md-12 text-left section-title">
+        <h2>Founding <span>Director</span> & LV-Lab</h2>
+      </div>
+  
+      <!-- 卡片整体容器 -->
+      <div class="row justify-content-center">
+        <div class="col-lg-9">
+          <!-- 卡片整体 -->
+            <div class="d-flex flex-wrap align-items-start shadow-sm p-4 mb-5 bg-white rounded custom-card">
+
+                <!-- 左栏头像 + 简介 -->
+            <div style="flex: 0 0 40px; padding-right: 0px;">
+                <img src="../../images/yanshuicheng.png" alt="Dr. Shuicheng Yan"
+                        style="width: 180px; border-radius: 10px; margin-bottom: 12px;">
+                <div style="line-height: 1.5; margin-top: 10px;">
+                    <div style="font-size: 0.85rem; color: #888;">Director</div>
+                    <div style="font-weight: 600; color: #c62828; font-size: 1.2rem;">Dr. Shuicheng Yan</div>
+                    <div style="font-size: 0.9rem; color: #777;">Distinguished Professor<br>(Practice), SoC, NUS</div>
                 </div>
+            </div>
             
-                <!-- 右半部分：详细介绍 -->
-                <!-- <div class="col-md-6">
-                    <div style="background: #f8f9fa; padding: 20px; border-radius: 8px; box-shadow: 0 2px 6px rgba(0,0,0,0.05); font-size: 0.95rem; line-height: 1.6; color: #444;">
-                        <strong>Prof. Shuicheng Yan</strong> is a Distinguished Professor (Practice) at NUS and former Group Chief Scientist at <strong>Sea Group</strong>. He is a Fellow of AAAI, ACM, IEEE, and other leading societies.
-                        <br><br>
-                        With 800+ publications and an H-index over 140, he is a Highly Cited Researcher for 10 years. His team has earned top honors in global AI competitions, including ImageNet and Pascal VOC.
-                    </div>
-                </div> -->
+            <div style="width: 1px; background-color: #ddd; height: auto; margin-right: 20px;"></div>
+
+                <!-- 右栏介绍 -->
+            <div class="right-wrapper d-flex flex-column justify-content-center" style="flex:1;">
+                <div class="right-panel justify-text">
+                    <p>
+                    <strong>Prof. Shuicheng Yan</strong> is a Fellow of the Singapore Academy of Engineering, AAAI, ACM, IEEE, and IAPR. 
+                    His research primarily focuses on computer vision, machine learning, and multimedia analysis. 
+                    He has been recognised as one of the World's Highly Cited Researchers for ten years, with an H-index exceeding 150. 
+                    Prof. Yan began his academic career at NUS on December 21, 2007, later transitioning to industry—serving notably as Group Chief Scientist at Sea Group, among other prominent roles—and subsequently returned to NUS on January 23, 2025.
+                    </p><p>
+                    Under Prof. Yan’s leadership, his team has achieved ten first-place or honorable-mention distinctions in the flagship competitions Pascal VOC and ImageNet (ILSVRC). 
+                    Moreover, the team has earned more than ten Best Paper and Best Student Paper awards, including a remarkable "grand slam" at ACM Multimedia, a premier multimedia research conference, where they secured three Best Paper Awards, two Best Student Paper Awards, and one Best Demo Award.
+                    </p>
+                </div>
             </div>
-            </div>
+          </div>
         </div>
+      </div>
     </div>
-</section>
+  </section>
 
 
 <section class="pt-6 pb-6">
@@ -237,7 +302,6 @@
     <div class="row">
         <div class="col-md-12 text-left section-title">
             <h2>Research Staff & Student
-                <span>@ NUS</span>
             </h2>
         </div>
     </div>
