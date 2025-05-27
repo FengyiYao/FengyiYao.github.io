@@ -369,7 +369,8 @@
         const card=document.getElementById('eventCardTmpl').content.firstElementChild.cloneNode(true);
         card.querySelector('time').textContent=formatDate(ev.date);
         card.querySelector('h3').textContent=ev.title;
-        card.querySelector('p').textContent=ev.summary||'';
+        const summaryP = card.querySelector('p');
+        if(ev.summary){card.querySelector('p').textContent=ev.summary;}else{summaryP.remove();}
         const link=card.querySelector('a');
         if(ev.link){link.href=ev.link;}else{link.remove();}
         list.appendChild(card);
