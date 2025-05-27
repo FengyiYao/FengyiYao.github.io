@@ -19477,18 +19477,15 @@ samp
     font-size: 87.5%;
 }
 
-::-moz-selection
-{
-    color: #fff; 
-    background: #f12639;
-}
-
-::selection
-{
-    color: #fff; 
-    background: #f12639;
-}
-
+::selection {
+    background: #cce4ff;
+    color: black;
+  }
+  
+  ::-moz-selection {
+    background: #cce4ff;
+    color: black;
+  }
 /* ==========================================================================
    Root
    ========================================================================== */
