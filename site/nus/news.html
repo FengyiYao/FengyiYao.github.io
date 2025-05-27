@@ -111,7 +111,7 @@
       max-width: 1200px;
       margin: 0 auto;
       gap: 2rem;
-      padding: 2rem 1rem;   
+      padding: 1rem;   
       align-items: flex-start;          
     }
 
@@ -139,6 +139,9 @@
         font-weight: 600;
         color: #ee7023;
         margin-top: 0.2rem;
+    }
+    .pub-card p {
+        text-indent: 2rem;
     }
     .pub-card .authors{
       font-size:.95rem;
@@ -295,7 +298,7 @@
       <ul id="timelineYears"></ul>
     </aside>
   
-    <section id="eventsList" style="flex:1;"></section>
+    <section id="eventsList" style="flex:1; padding: 0.5rem;"></section>
   </main>
 
   <!-- ╭────────── Card ──────────╮ -->
@@ -359,7 +362,7 @@
           const h=document.createElement('h2');
           h.textContent=group;
           h.dataset.anchor=group;
-          h.className='text-xl font-bold mt-0 first:mt-0 text-[color:var(--lv-orange)]';
+          h.className='text-xl font-bold mt-0 first:mt-0 text-[color:var(--lv-orange)] mb-4 mt-4';
           list.appendChild(h);
         }
 
@@ -407,7 +410,7 @@
     /* ========== Bootstrap ========== */
     (async()=>{
       try{
-        const res=await fetch('/assets/events.json');   // 根据实际路径调整
+        const res=await fetch('/assets/events.json');   
         events=await res.json();
       }catch(e){
         console.error('Failed to load events.json',e);
