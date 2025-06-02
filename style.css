@@ -759,15 +759,12 @@ h2 {
   background-repeat: no-repeat;
   background-position: center;
   position: relative;
-  min-height: 220px;
-  display:flex;align-items:center;
 }
 
 .pages-header h1 {
   color: #fff;
   font-weight: 700;
   font-size: 50px;
-  margin-bottom:0;
 }
 
 .pages-header .breadcrumbs {
