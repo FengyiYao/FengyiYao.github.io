@@ -23,7 +23,8 @@
     "title": "Removing Prompt-template Bias in Reinforcement Learning from Human Feedback",
     "authors": "Chaojie Wang, Haonan Shi, Long Tian, Bo An, Shuicheng Yan",
     "venue": "Annual Meeting of the Association for Computational Linguistics (ACL Findings), 2025",
-    "links": {}
+    "links": {},
+    "presentation": "highlight" 
   },
   {
     "year": 2025,

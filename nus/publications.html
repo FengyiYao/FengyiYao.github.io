@@ -162,6 +162,10 @@
         background:#66ccff;  
         color:#fff;
     }
+    .pres-badge.highlight {
+        background:#FF62DD;
+        color:#fff;
+    }
     </style>
   
 </head>
@@ -314,9 +318,9 @@
               list.appendChild(h);
             }
             let badgeHtml = '';
-            if (p.presentation === 'oral' || p.presentation === 'spotlight'){
-                const label = p.presentation === 'oral' ? 'Oral' : 'Spotlight';
-                badgeHtml = `<span class="pres-badge ${p.presentation}">${label}</span>`;
+            if (['oral','spotlight','highlight'].includes(p.presentation)){
+                const labelMap = {oral:'Oral', spotlight:'Spotlight', highlight:'Highlight'};
+                badgeHtml = `<span class="pres-badge ${p.presentation}">${labelMap[p.presentation]}</span>`;
             }
             const linksHTML = Object.entries(p.links || {}).map(([k, v]) => {
                 if (!v) return '';
